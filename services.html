@@ -1,0 +1,27 @@
+{% include 'header.html'%}
+{% load static %}
+<html>
+    <head>
+    </head>
+    <title>services</title>
+    <body>
+        <div class="main">
+            <ul>
+            <form method="GET">
+                <input type="text" name="servicename"value=""/>
+                <input type="submit" value="search"/>
+                
+            </form>
+            {% for services in ser %}
+            <li>
+                <h2> {{ services.service_title }}</h2>
+                <p>  {{ services.service_desc }}</p>
+                <h3> {{ services.service_icon }}</h3>
+                <img src="\media\{{ services.service_img}}"" height="500px" width="500px"/>
+            </li>
+            {% empty %}
+            no data found
+            {% endfor %}
+        </ul>
+    </body>
+    </html>

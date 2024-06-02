@@ -1,0 +1,49 @@
+{% include 'header.html'%}
+{% load static %}<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            width: 550px;
+            margin: 10px;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            
+            background-color: rgba(360, 240, 260, 0.2);
+          }
+        body {
+            .container{
+                color: white;
+            }
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; /* Cover the entire background */
+        .container {
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+    .container h2{
+        color: rgba(360,240,65,778);
+        border: 1px  #ccc;
+    }}
+    </style>
+</head>
+<body>
+    <center><div class="container">
+        
+        <form method="post" action="">
+            <h2>Sign Up</h2>
+            {{fm}}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div></center>
+</body>
+</html>
+

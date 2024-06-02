@@ -1,0 +1,126 @@
+{% include 'header.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #764887bd;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        body {
+            background-image: url('https://www.restroapp.com/blog/wp-content/uploads/2016/06/future-of-online-food-ordering-by-restaurant-app-restroapp-compressed.jpg');
+            background-size:cover; /* Cover the entire background */
+            background-position:relative; /* Center the background image */
+            background-image:blur;
+        
+        }
+        
+        h1 {
+            text-align: center;
+            color:#101D1C;
+        }
+        
+        label {
+            font-weight: bold;
+            color: black;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: 50%%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 30%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <center><h1> Order Now Your Food</h1>
+    <div class="contact-box"> 
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone"required ><br>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address"required ><br>
+
+        <label for="food">Food:</label>
+        <select id="food" name="food" required>
+            <option value="None">None</option>
+            <option value="Gulab Jamun">Gulab Jamun</option>
+            <option value="Noodles">Noodles</option>
+            <option value="Rice">Rice</option>
+            <option value="Veg Thali">Veg Thali</option>
+            <option value="Biryani">Biryani</option>
+            <option value="Butter Chicken">Butter Chicken</option>
+            <option value="Tandoori Chicken">Tandoori Chicken</option>
+            <option value="Palak Paneer">Palak Paneer</option>
+            <option value="chole">Chole</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Dal Makhani">Dal Makhani</option>
+            <option value="Samosa">Samosa</option>
+            <option value="Naan">Naan</option>
+            <option value="Dosa">Dosa</option>
+            <option value="Rogan Josh">Rogan Josh</option>
+            <option value="Paneer Tikka">Paneer Tikka</option>
+            <option value="Aloo Gobi">Aloo Gobi</option>
+            <option value="Chicken Tikka Masala">Chicken Tikka Masala</option>
+            <option value="Pani Puri">Pani Puri</option>
+            <option value="Raita">Raita</option>
+            <option value="Vada Pav">Vada Pav</option>
+            <option value="Chole Bhature">Chole Bhature</option>
+            <option value="Rasgulla">Rasgulla</option>
+        </select><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+        <input type="submit" value="submit order">
+    </form>
+</div></center>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% include 'header.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% block 'main' %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us-Food World</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #8548ff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow:  rgba(658, 154, 165, 0.9);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .order {
+            width: 350px;
+            height:250px;
+            margin: 10px;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            
+            background-color: rgba(360, 240, 260, 0.2);
+          }
+          .order{
+            
+        background-image: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover; /* Cover the entire background */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to Foody World</h2>
+        <p>Our Food Website is your ultimate destination for all things food. From mouthwatering recipes to expert cooking tips, we've got everything you need to unleash your inner chef.</p>
+        <div class="order" height="250px" width="250px"><button><a href="/order">Order Now</a></button></div>
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="250px" width="250px"/>
+        
+        
+        
+        
+        
+        <br><h2>Our Story</h2>
+        <p>Our journey began with a simple love for food and a desire to bring people together through culinary experiences. What started as a passion project in a tiny kitchen has grown into a vibrant community of food lovers from all walks of life.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to inspire and empower home cooks to explore new flavors, expand their culinary skills, and create memorable meals with confidence. We believe that good food has the power to nourish the body, delight the senses, and foster meaningful connections.</p>
+        
+        <h2>What We Offer</h2>
+        <p>On our website, you'll find a treasure trove of recipes ranging from quick and easy weeknight dinners to show-stopping desserts for special occasions. We also offer cooking tutorials, ingredient spotlights, and in-depth articles on culinary trends and techniques.</p>
+        
+        <h2>Meet the Team</h2>
+        <p>Behind Your Food Website is a team of dedicated food enthusiasts, chefs, writers, and photographers who are passionate about sharing their love for food with the world. Get to know the faces behind the recipes and stories that you love.</p>
+        
+        <h2>Get in Touch</h2>
+        <p>We love hearing from our community! Whether you have a question, feedback, or just want to say hello, we're always here to chat. Connect with us on social media or send us an email - we can't wait to hear from you!</p>
+        
+    </div>
+</body>
+</html>
+
+
+           
+        {% endblock 'main' %}
+{% include 'footer.html' %}

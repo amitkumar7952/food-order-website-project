@@ -1,0 +1,72 @@
+{% include 'header.html'%}
+{% load static %}
+<html>
+    <head>
+        <title>contact us</title>
+        <style>
+            /* CSS for the contact form box */
+            .contact-box {
+              width: 400px;
+              margin: 0 auto;
+              padding: 20px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              
+              background-color: rgba(160, 140, 120, 0.4);
+            }
+            .contact-box input[type="submit"] {
+                background-color:skyblue;
+                color:black;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: background-color 0.5s;
+              }
+              .contact-box textarea {
+                height: 100px;
+              }
+              .contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box input[type="tel"],
+.contact-box textarea {
+  width: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body {
+    .contact-box h1{
+        color: white;
+    }
+    background-image: url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Cover the entire background */
+.contact-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+            </style>
+    </head>
+<body>
+    <center><h1>CONTACT US</h1>
+       <div class="contact-box"> 
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"required ><br>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"required ><br>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone"required ><br>
+            
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message"required ><br>
+            <input type="submit" value="submit">
+        </form></center></div>
+    </body>
+    
+    </html>
